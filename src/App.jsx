@@ -41,12 +41,9 @@ function App() {
       {error && (
         <div style={{ marginTop: "20px", color: "red" }}>
           <p>{error}</p>
-          <a href="#" onClick={(event) => {
-            event.preventDefault();
-            fetchJoke();
-          }}>
+          <button onClick={fetchJoke}>
             Try again
-          </a>
+          </button>
         </div>
       )}
     </div>
