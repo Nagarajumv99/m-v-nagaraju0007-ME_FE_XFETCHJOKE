@@ -19,7 +19,7 @@ function App() {
       setJoke(data);
     } catch (error) {
       console.error("Error fetching joke:", error);
-      setError("Could not fetch joke. Try again.");
+      setError("Could not fetch a joke. Try again.");
     } finally {
       setIsLoading(false);
     }
@@ -30,7 +30,7 @@ function App() {
       <h1>Random Joke</h1>
       <p>Click the button to fetch a fresh one.</p>
       <button onClick={fetchJoke} disabled={isLoading}>
-        {isLoading ? "Loading..." : "Fetch joke"}
+        {isLoading ? "Fetching..." : "Fetch joke"}
       </button>
       {joke && (
         <div>
